@@ -1,0 +1,119 @@
+---
+title: "Curso RadarGeo"
+output: github_document
+---
+
+
+I(niciando o Curso)
+```{r}
+c(1,2,3,4,5,6,7,8,9)
+
+c(1:9)
+
+dados_seq <- seq(from = 1, to = 9, by = 1)
+print(dados_seq)
+
+set.seed(10)
+dados_jogados <- sample(x = 1:6, size = 1000, replace = TRUE)
+plot(dados_jogados)
+hist(dados_jogados)
+
+```
+
+```{r}
+#exemplo criação de matriz
+exemplo3 <- sample(x = 1:6, size = 10, replace = T)
+exemplo.matriz <- matrix(nrow = 5, ncol = 2, data = exemplo3)
+exemplo.matriz
+
+#exemplo Dataframe
+df <- data.frame(aluno = c("Edu", "joão", "miguel"),
+                    nota = c(9, 6, 7),
+                    aprovacao = c(T, F, T))
+
+print(df)
+
+```
+```{r}
+library(sp)
+
+data(meuse)
+
+head(meuse)
+
+# meuse[LINHAS, COLUNAS]
+
+meuse[1,1]
+meuse[,4]
+
+#filtragem
+meuse[meuse$zinc > 1000,]
+
+meuse[meuse$zinc,]
+
+```
+
+```{r}
+
+library(dplyr)
+library()
+
+plot(meuse$copper~meuse$zinc)
+
+#fazer uma regressão
+modelo <- lm(meuse$elev~meuse$lime)
+
+R2 <- round(summary(modelo)$adj.r.squared, 3)
+
+
+matplot(x = meuse$elev, y = meuse$lime, pch = 20,
+        xlab = "Elevação",
+        ylab = "Barro",
+        col = 'black',
+        cex = 2)
+
+abline(modelo, lwd = 3, lty =2)
+
+```
+
+```{r}
+
+zinco_filter <- read.table()
+
+
+
+
+
+
+```
+
+```{r}
+library(raster)
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
