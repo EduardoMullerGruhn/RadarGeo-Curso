@@ -1,0 +1,18 @@
+---
+title: "Curso RadarGeo"
+output: github_document
+---
+
+```{r}
+
+dados_seq <- seq(from = 1, to = 9)
+
+
+set.seed(10)
+dados_jogados <- sample(x = 1:6, size = 1000, replace = TRUE)
+plot(dados_jogados)
+hist(dados_jogados)
+
+
+```
+
